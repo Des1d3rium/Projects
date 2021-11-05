@@ -93,10 +93,15 @@ public class SalariedEmployee extends Employee
         return false;
     }
 
-    public int compareToByName(String firstNameInput, String lastNameInput)
+    public int compareToByName(Employee employee1)
     {
-        int lengthOfFirstName = min(firstNameInput.length(), firstName.length());
-        int lengthOfLastName = min(lastNameInput.length(), lastName.length());
-
+        if(this.getLastName().compareToIgnoreCase(employee1.getLastName()) == 0)
+        {
+            return this.getFirstName().compareToIgnoreCase(employee1.getFirstName());
+        }
+        else
+        {
+            return this.getLastName().compareToIgnoreCase(employee1.getLastName());
+        }
     }
 }
