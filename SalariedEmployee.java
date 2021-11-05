@@ -1,4 +1,5 @@
 import javax.swing.BoundedRangeModel;
+import java.lang.Math;
 
 /**
  * this class contains behaviours of a salaried employee
@@ -94,6 +95,8 @@ public class SalariedEmployee extends Employee
 
     public int compareToByName(String firstNameInput, String lastNameInput)
     {
-        return 0;
+        int lengthOfFirstName = min(firstNameInput.length(), firstName.length());
+        int lengthOfLastName = min(lastNameInput.length(), lastName.length());
+
     }
 }
