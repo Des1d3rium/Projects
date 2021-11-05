@@ -1,7 +1,7 @@
 /**
  * this abstract class explore common traits of all three kinds of employee.
  */
-public abstract class employee
+public abstract class Employee
 {
     public abstract String getFirstName();
     
@@ -19,9 +19,13 @@ public abstract class employee
 
     public abstract void adjustPay(double percentage);
 
-    public abstract boolean equals(employee employee1, employee employee2);
+    public abstract boolean equals(Employee employee1, Employee employee2);
     
     public abstract int compareToByName(String name);
 
     public abstract int compareToByEarning(double earning);
+
+    public abstract void setSupervisor(Supervisor supervisorInput);
+
+    public abstract Supervisor getSupervisor();
 } 
