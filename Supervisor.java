@@ -1,5 +1,6 @@
 /**
  * this abstract class explore common traits of all three kinds of supervisor
+ * @author dxl746
  */
 
 public abstract class Supervisor
