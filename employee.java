@@ -3,5 +3,6 @@
  */
 public abstract class employee
 {
+    public abstract String getFirstName();
     
 } 
