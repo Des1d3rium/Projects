@@ -1,6 +1,3 @@
-import javax.swing.BoundedRangeModel;
-import java.lang.Math;
-
 /**
  * this class contains behaviours of a salaried employee
  * @author dxl746
@@ -12,6 +9,7 @@ public class SalariedEmployee extends Employee
     private String number;
     private double salary;
     private double bonus;
+    private Supervisor supervisor;
 
     public SalariedEmployee(String firstNameInput, String lastNameInput, String numberInput, double salaryInput)
     {
@@ -78,13 +76,13 @@ public class SalariedEmployee extends Employee
         return getNumber() + ": " + getLastName() + ", " + getFirstName() + ", Salaried Employee";
     }
 
-    public boolean equals(Employee employee1, Employee employee2)
+    public boolean equals(Employee employeeInput1, Employee employeeInput2)
     {
-        if(employee1.getFirstName().equals(employee2.getFirstName()))
+        if(employeeInput1.getFirstName().equals(employeeInput2.getFirstName()))
         {
-            if(employee1.getLastName().equals(employee2.getLastName()))
+            if(employeeInput1.getLastName().equals(employeeInput2.getLastName()))
             {
-                if(employee1.getNumber() == employee2.getNumber())
+                if(employeeInput1.getNumber() == employeeInput2.getNumber())
                 {
                     return true;
                 }
@@ -93,17 +91,31 @@ public class SalariedEmployee extends Employee
         return false;
     }
 
-    public int compareToByName(Employee employee1)
+    public int compareToByName(Employee employeeInput)
     {
-        if(this.getLastName().compareToIgnoreCase(employee1.getLastName()) == 0)
+        if(this.getLastName().compareToIgnoreCase(employeeInput.getLastName()) == 0)
         {
-            return this.getFirstName().compareToIgnoreCase(employee1.getFirstName());
+            return this.getFirstName().compareToIgnoreCase(employeeInput.getFirstName());
         }
         else
         {
-            return this.getLastName().compareToIgnoreCase(employee1.getLastName());
+            return this.getLastName().compareToIgnoreCase(employeeInput.getLastName());
         }
     }
+    
+    public int compareToByEarning(Employee employeeInput)
+    {
+        return (int)(this.getAmountEarned() - employeeInput.getAmountEarned()); 
+    } 
 
+    public void setSupervisor(Supervisor supervisorInput)
+    {
+        supervisor = supervisorInput;
+    }
+
+    public Supervisor getSupervisor()
+    {
+        return supervisor;
+    }
     
 }

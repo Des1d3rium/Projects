@@ -24,9 +24,9 @@ public abstract class Employee
 
     public abstract String toString(); 
 
-    public abstract int compareToByName(String name);
+    public abstract int compareToByName(Employee employee1);
 
-    public abstract int compareToByEarning(double earning);
+    public abstract int compareToByEarning(Employee employee1);
 
     public abstract void setSupervisor(Supervisor supervisorInput);
 
