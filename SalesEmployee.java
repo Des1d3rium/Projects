@@ -1,37 +1,30 @@
-/**
- * A <code>SalariedEmployee</code> class represent employee paid by fixed salary. 
- * Here are some example of how it could be used: <br></br>
- * <code>SalariedEmployee johnDoe = new SalariedEmployee("John", "Doe", 0001, 2000)</code>
- * 
- * @author dxl746
- */
-public class SalariedEmployee extends Employee
+public class SalesEmployee extends Employee
 {
-    // this field stores the first name of employee
+    // this field stores the first name 
     private String firstName;
 
-    // this field stores the last name of employee
+    // this field stores the last name 
     private String lastName;
 
-    // this field stores the serial number of the employee
+    // this field stores the serial number 
     private String number;
 
-    // this field stores the salary of the employee
+    // this field stores the salary. Salary is fixed to one employee
     private double salary;
 
-    // this field stores the bouns of the employee
+    // this field stores the bouns. Bonus is variable to one employee
     private double bonus;
 
-    // this field stores the supervisor of the employee
+    // this field stores the supervisor 
     private Supervisor supervisor;
 
     /**
-     * @param firstNameInput The first name of employee
-     * @param lastNameInput The last name of employee
-     * @param numberInput The serial number of employee
+     * @param firstNameInput The first name 
+     * @param lastNameInput The last name 
+     * @param numberInput The serial number 
      * @param salaryInput The fixed salary
      */
-    public SalariedEmployee(String firstNameInput, String lastNameInput, String numberInput, double salaryInput)
+    public SalesEmployee(String firstNameInput, String lastNameInput, String numberInput, double salaryInput)
     {
         this.firstName = firstNameInput;
         this.lastName = lastNameInput;
