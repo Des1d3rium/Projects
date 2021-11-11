@@ -10,7 +10,10 @@ public class HourlyEmployee extends Employee
     private String number;
 
     // this field stores the salary
-    private double salary;
+    private double hourlyRate;
+
+    // this field stores worked hours
+    private double hoursWorked; 
 
     // this field stores the bouns
     private double bonus;
@@ -24,12 +27,12 @@ public class HourlyEmployee extends Employee
      * @param numberInput The serial number 
      * @param salaryInput The fixed salary
      */
-    public HourlyEmployee(String firstNameInput, String lastNameInput, String numberInput, double salaryInput)
+    public HourlyEmployee(String firstNameInput, String lastNameInput, String numberInput, double hourlyRateInput)
     {
         this.firstName = firstNameInput;
         this.lastName = lastNameInput;
         this.number = numberInput;
-        this.salary = salaryInput; 
+        this.hourlyRate = hourlyRateInput;
     }
 
 
@@ -75,20 +78,32 @@ public class HourlyEmployee extends Employee
     /** 
      * @return double
      */
-    public double getSalary()
+    public double getHourlyRate()
     {
-        return salary;
+        return hourlyRate;
     }
 
     
     /** 
-     * @param salaryInput
+     * @param hourlyRate
      */
-    public void setSalary(double salaryInput)
+    public void setHourlyRate(double hourlyRateInput)
     {
-        salary = salaryInput;
+        hourlyRate = hourlyRateInput;
     }
 
+    /**
+     * @return <code>hoursWorked</code> the hours this employee has worked
+     */
+    public double getHoursWorked()
+    {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(double hoursWorkedInput)
+    {
+        hoursWorked = hoursWorkedInput;
+    }
     
     /** 
      * @return double
@@ -113,7 +128,7 @@ public class HourlyEmployee extends Employee
      */
     public double getAmountEarned()
     {
-        return getBonus()+getSalary();
+        return getBonus()+getHourlyRate()*getHoursWorked();
     }
 
     
@@ -122,8 +137,8 @@ public class HourlyEmployee extends Employee
      */
     public void adjustPay(double percentage)
     {
-        double salaryTemp = this.getSalary() * (1.0+percentage);
-        this.setSalary(salaryTemp);
+        double hourlyTemp = this.getHourlyRate() * (1.0 + percentage);
+        this.setHourlyRate(hourlyTemp);
     }
 
     

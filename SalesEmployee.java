@@ -9,10 +9,16 @@ public class SalesEmployee extends Employee
     // this field stores the serial number 
     private String number;
 
-    // this field stores the salary. Salary is fixed to one employee
+    // this field stores ones salary
     private double salary;
 
-    // this field stores the bouns. Bonus is variable to one employee
+    // this field stores ones commission
+    private double commission; 
+
+    // this field stores how many sales have been made
+    private int numberSales;
+
+    // this field stores ones bonus
     private double bonus;
 
     // this field stores the supervisor 
@@ -24,12 +30,13 @@ public class SalesEmployee extends Employee
      * @param numberInput The serial number 
      * @param salaryInput The fixed salary
      */
-    public SalesEmployee(String firstNameInput, String lastNameInput, String numberInput, double salaryInput)
+    public SalesEmployee(String firstNameInput, String lastNameInput, String numberInput, double salaryInput, double commissionInput)
     {
         this.firstName = firstNameInput;
         this.lastName = lastNameInput;
         this.number = numberInput;
         this.salary = salaryInput; 
+        this.commission = commissionInput;
     }
 
 
@@ -89,6 +96,41 @@ public class SalesEmployee extends Employee
         salary = salaryInput;
     }
 
+    
+    /** 
+     * @return double
+     */
+    public double getCommission()
+    {
+        return commission;
+    }
+
+    
+    /** 
+     * @param commissionInput
+     */
+    public void setCommission(double commissionInput)
+    {
+        commission = commissionInput;
+    }
+
+    
+    /** 
+     * @return double
+     */
+    public double getNumberSales()
+    {
+        return numberSales;
+    }
+
+    
+    /** 
+     * @param numberSalesInput
+     */
+    public void setNumberSales(int numberSalesInput)
+    {
+        numberSales = numberSalesInput;
+    }
     
     /** 
      * @return double
