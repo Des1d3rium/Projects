@@ -132,7 +132,7 @@ public class HourlyEmployee extends Employee
      */
     public String toString()
     {
-        return getNumber() + ": " + getLastName() + ", " + getFirstName() + ", Salaried Employee";
+        return getNumber() + ": " + getLastName() + ", " + getFirstName() + ", Hourly Employee";
     }
 
     

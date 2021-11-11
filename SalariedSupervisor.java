@@ -1,30 +1,30 @@
-public class SalesEmployee extends Employee
+public class SalariedSupervisor extends Supervisor
 {
-    // this field stores the first name 
+    // this field stores the first name of employee
     private String firstName;
 
-    // this field stores the last name 
+    // this field stores the last name of employee
     private String lastName;
 
-    // this field stores the serial number 
+    // this field stores the serial number of the employee
     private String number;
 
-    // this field stores the salary. Salary is fixed to one employee
+    // this field stores the salary of the employee
     private double salary;
 
-    // this field stores the bouns. Bonus is variable to one employee
+    // this field stores the bouns of the employee
     private double bonus;
 
-    // this field stores the supervisor 
+    // this field stores the supervisor of the employee
     private Supervisor supervisor;
 
     /**
-     * @param firstNameInput The first name 
-     * @param lastNameInput The last name 
-     * @param numberInput The serial number 
+     * @param firstNameInput The first name of employee
+     * @param lastNameInput The last name of employee
+     * @param numberInput The serial number of employee
      * @param salaryInput The fixed salary
      */
-    public SalesEmployee(String firstNameInput, String lastNameInput, String numberInput, double salaryInput)
+    public SalariedSupervisor(String firstNameInput, String lastNameInput, String numberInput, double salaryInput)
     {
         this.firstName = firstNameInput;
         this.lastName = lastNameInput;
@@ -132,22 +132,22 @@ public class SalesEmployee extends Employee
      */
     public String toString()
     {
-        return getNumber() + ": " + getLastName() + ", " + getFirstName() + ", Sales Employee";
+        return getNumber() + ": " + getLastName() + ", " + getFirstName() + ", Salaried Supervisor";
     }
 
     
     /** 
-     * @param employeeInput1
-     * @param employeeInput2
+     * @param supervisorInput1
+     * @param supervisorInput2
      * @return boolean
      */
-    public boolean equals(Employee employeeInput1, Employee employeeInput2)
+    public boolean equals(Supervisor supervisorInput1, Supervisor supervisorInput2)
     {
-        if(employeeInput1.getFirstName().equals(employeeInput2.getFirstName()))
+        if(supervisorInput1.getFirstName().equals(supervisorInput2.getFirstName()))
         {
-            if(employeeInput1.getLastName().equals(employeeInput2.getLastName()))
+            if(supervisorInput1.getLastName().equals(supervisorInput2.getLastName()))
             {
-                if(employeeInput1.getNumber() == employeeInput2.getNumber())
+                if(supervisorInput1.getNumber() == supervisorInput2.getNumber())
                 {
                     return true;
                 }
@@ -158,29 +158,29 @@ public class SalesEmployee extends Employee
 
     
     /** 
-     * @param employeeInput
+     * @param supervisorInput
      * @return int
      */
-    public int compareToByName(Employee employeeInput)
+    public int compareToByName(Supervisor supervisorInput)
     {
-        if(this.getLastName().compareToIgnoreCase(employeeInput.getLastName()) == 0)
+        if(this.getLastName().compareToIgnoreCase(supervisorInput.getLastName()) == 0)
         {
-            return this.getFirstName().compareToIgnoreCase(employeeInput.getFirstName());
+            return this.getFirstName().compareToIgnoreCase(supervisorInput.getFirstName());
         }
         else
         {
-            return this.getLastName().compareToIgnoreCase(employeeInput.getLastName());
+            return this.getLastName().compareToIgnoreCase(supervisorInput.getLastName());
         }
     }
     
     
     /** 
-     * @param employeeInput
+     * @param supervisorInput
      * @return int
      */
-    public int compareToByEarning(Employee employeeInput)
+    public int compareToByEarning(Supervisor supervisorInput)
     {
-        return (int)(this.getAmountEarned() - employeeInput.getAmountEarned()); 
+        return (int)(this.getAmountEarned() - supervisorInput.getAmountEarned()); 
     } 
 
     
@@ -202,3 +202,4 @@ public class SalesEmployee extends Employee
     }
     
 }
+
