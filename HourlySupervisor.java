@@ -1,4 +1,4 @@
-public class HourlySupervisor extends Supervisor
+public class HourlySupervisor extends Employee
 {
     // this field stores the first name 
     private String firstName;
@@ -19,7 +19,7 @@ public class HourlySupervisor extends Supervisor
     private double bonus;
     
     // this field stores the supervisor
-    private Supervisor supervisor;
+    private Employee supervisor;
     
     /**
      * @param firstNameInput The first name 
@@ -156,7 +156,7 @@ public class HourlySupervisor extends Supervisor
      * @param supervisorInput2
      * @return boolean
      */
-    public boolean equals(Supervisor supervisorInput1, Supervisor supervisorInput2)
+    public boolean equals(Employee supervisorInput1, Employee supervisorInput2)
     {
         if(supervisorInput1.getFirstName().equals(supervisorInput2.getFirstName()))
         {
@@ -176,7 +176,7 @@ public class HourlySupervisor extends Supervisor
      * @param supervisorInput2
      * @return int
      */
-    public int compareToByName(Supervisor supervisorInput2)
+    public int compareToByName(Employee supervisorInput2)
     {
         if(this.getLastName().compareToIgnoreCase(supervisorInput2.getLastName()) == 0)
         {
@@ -193,7 +193,7 @@ public class HourlySupervisor extends Supervisor
      * @param supervisorInput
      * @return int
      */
-    public int compareToByEarning(Supervisor supervisorInput)
+    public int compareToByEarning(Employee supervisorInput)
     {
         return (int)(this.getAmountEarned() - supervisorInput.getAmountEarned()); 
     } 
@@ -202,7 +202,7 @@ public class HourlySupervisor extends Supervisor
     /** 
      * @param supervisorInput
      */
-    public void setSupervisor(Supervisor supervisorInput)
+    public void setSupervisor(Employee supervisorInput)
     {
         supervisor = supervisorInput;
     }
@@ -211,7 +211,7 @@ public class HourlySupervisor extends Supervisor
     /** 
      * @return Supervisor
      */
-    public Supervisor getSupervisor()
+    public Employee getSupervisor()
     {
         return supervisor;
     }

@@ -28,7 +28,7 @@ public abstract class Employee
 
     public abstract int compareToByEarning(Employee employee1);
 
-    public abstract void setSupervisor(Supervisor supervisorInput);
+    public abstract void setSupervisor(Employee supervisorInput);
 
-    public abstract Supervisor getSupervisor();
+    public abstract Employee getSupervisor();
 } 

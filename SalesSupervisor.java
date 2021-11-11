@@ -1,4 +1,4 @@
-public class SalesSupervisor extends Supervisor
+public class SalesSupervisor extends Employee
 {
     // this field stores the first name 
     private String firstName;
@@ -22,7 +22,7 @@ public class SalesSupervisor extends Supervisor
     private double bonus;
     
     // this field stores the supervisor 
-    private Supervisor supervisor;
+    private Employee supervisor;
     
     /**
      * @param firstNameInput The first name 
@@ -182,7 +182,7 @@ public class SalesSupervisor extends Supervisor
      * @param supervisorInput2
      * @return boolean
      */
-    public boolean equals(Supervisor supervisorInput1, Supervisor supervisorInput2)
+    public boolean equals(Employee supervisorInput1, Employee supervisorInput2)
     {
         if(supervisorInput1.getFirstName().equals(supervisorInput2.getFirstName()))
         {
@@ -202,7 +202,7 @@ public class SalesSupervisor extends Supervisor
      * @param supervisorInput2
      * @return int
      */
-    public int compareToByName(Supervisor supervisorInput2)
+    public int compareToByName(Employee supervisorInput2)
     {
         if(this.getLastName().compareToIgnoreCase(supervisorInput2.getLastName()) == 0)
         {
@@ -219,7 +219,7 @@ public class SalesSupervisor extends Supervisor
      * @param supervisorInput2
      * @return int
      */
-    public int compareToByEarning(Supervisor supervisorInput2)
+    public int compareToByEarning(Employee supervisorInput2)
     {
         return (int)(this.getAmountEarned() - supervisorInput2.getAmountEarned()); 
     } 
@@ -228,7 +228,7 @@ public class SalesSupervisor extends Supervisor
     /** 
      * @param supervisorInput
      */
-    public void setSupervisor(Supervisor supervisorInput)
+    public void setSupervisor(Employee supervisorInput)
     {
         supervisor = supervisorInput;
     }
@@ -237,7 +237,7 @@ public class SalesSupervisor extends Supervisor
     /** 
      * @return Supervisor
      */
-    public Supervisor getSupervisor()
+    public Employee getSupervisor()
     {
         return supervisor;
     }

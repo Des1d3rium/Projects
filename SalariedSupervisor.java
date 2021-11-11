@@ -1,4 +1,4 @@
-public class SalariedSupervisor extends Supervisor
+public class SalariedSupervisor extends Employee
 {
     // this field stores the first name of employee
     private String firstName;
@@ -16,7 +16,7 @@ public class SalariedSupervisor extends Supervisor
     private double bonus;
 
     // this field stores the supervisor of the employee
-    private Supervisor supervisor;
+    private Employee supervisor;
 
     /**
      * @param firstNameInput The first name of employee
@@ -113,7 +113,7 @@ public class SalariedSupervisor extends Supervisor
      */
     public double getAmountEarned()
     {
-        return getBonus()+getSalary();
+        return getBonus() + getSalary();
     }
 
     
@@ -122,7 +122,7 @@ public class SalariedSupervisor extends Supervisor
      */
     public void adjustPay(double percentage)
     {
-        double salaryTemp = this.getSalary() * (1.0+percentage);
+        double salaryTemp = this.getSalary() * (1.0 + percentage);
         this.setSalary(salaryTemp);
     }
 
@@ -141,7 +141,7 @@ public class SalariedSupervisor extends Supervisor
      * @param supervisorInput2
      * @return boolean
      */
-    public boolean equals(Supervisor supervisorInput1, Supervisor supervisorInput2)
+    public boolean equals(Employee supervisorInput1, Employee supervisorInput2)
     {
         if(supervisorInput1.getFirstName().equals(supervisorInput2.getFirstName()))
         {
@@ -161,7 +161,7 @@ public class SalariedSupervisor extends Supervisor
      * @param supervisorInput
      * @return int
      */
-    public int compareToByName(Supervisor supervisorInput)
+    public int compareToByName(Employee supervisorInput)
     {
         if(this.getLastName().compareToIgnoreCase(supervisorInput.getLastName()) == 0)
         {
@@ -178,7 +178,7 @@ public class SalariedSupervisor extends Supervisor
      * @param supervisorInput
      * @return int
      */
-    public int compareToByEarning(Supervisor supervisorInput)
+    public int compareToByEarning(Employee supervisorInput)
     {
         return (int)(this.getAmountEarned() - supervisorInput.getAmountEarned()); 
     } 
@@ -187,7 +187,7 @@ public class SalariedSupervisor extends Supervisor
     /** 
      * @param supervisorInput
      */
-    public void setSupervisor(Supervisor supervisorInput)
+    public void setSupervisor(Employee supervisorInput)
     {
         supervisor = supervisorInput;
     }
@@ -196,7 +196,7 @@ public class SalariedSupervisor extends Supervisor
     /** 
      * @return Supervisor
      */
-    public Supervisor getSupervisor()
+    public Employee getSupervisor()
     {
         return supervisor;
     }

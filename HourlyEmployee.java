@@ -19,7 +19,7 @@ public class HourlyEmployee extends Employee
     private double bonus;
 
     // this field stores the supervisor
-    private Supervisor supervisor;
+    private Employee supervisor;
 
     /**
      * @param firstNameInput The first name 
@@ -202,7 +202,7 @@ public class HourlyEmployee extends Employee
     /** 
      * @param supervisorInput
      */
-    public void setSupervisor(Supervisor supervisorInput)
+    public void setSupervisor(Employee supervisorInput)
     {
         supervisor = supervisorInput;
     }
@@ -211,7 +211,7 @@ public class HourlyEmployee extends Employee
     /** 
      * @return Supervisor
      */
-    public Supervisor getSupervisor()
+    public Employee getSupervisor()
     {
         return supervisor;
     }
