@@ -13,7 +13,7 @@ public class EmployeeDatabase extends LinkedList<Employee>
         databaseLinkedList.addToFront(employeeInput);
     }
 
-    public Employee find(String firstNameInput, String lastNameInput, String numberInput) throws NoSuchEmployee
+    public Employee find(String firstNameInput, String lastNameInput, String numberInput) throws NoSuchEmployeeException
     {
         try 
         {
@@ -29,11 +29,12 @@ public class EmployeeDatabase extends LinkedList<Employee>
                     temp = temp.getNext();
                 }
             }
-            throw new NoSuchEmployee();
-        } 
-        catch (NoSuchEmployee e) 
+            throw new NoSuchEmployeeException();
+        }
+        catch (NoSuchEmployeeException e)
         {
             System.out.println("There is no such employee");
+            return null;
         }
     }
 
