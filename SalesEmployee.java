@@ -183,13 +183,13 @@ public class SalesEmployee extends Employee
      * @param employeeInput2
      * @return boolean
      */
-    public boolean equals(Employee employeeInput1, Employee employeeInput2)
+    public boolean equals(Employee employeeInput2)
     {
-        if(employeeInput1.getFirstName().equals(employeeInput2.getFirstName()))
+        if(this.getFirstName().equals(employeeInput2.getFirstName()))
         {
-            if(employeeInput1.getLastName().equals(employeeInput2.getLastName()))
+            if(this.getLastName().equals(employeeInput2.getLastName()))
             {
-                if(employeeInput1.getNumber() == employeeInput2.getNumber())
+                if(this.getNumber().equals(employeeInput2.getNumber()))
                 {
                     return true;
                 }

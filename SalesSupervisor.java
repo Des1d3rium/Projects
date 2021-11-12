@@ -178,21 +178,21 @@ public class SalesSupervisor extends Employee
     
     
     /** 
-     * @param supervisorInput1
-     * @param supervisorInput2
+     * @param employeeInput1
+     * @param employeeInput2
      * @return boolean
      */
-    public boolean equals(Employee supervisorInput1, Employee supervisorInput2)
+    public boolean equals(Employee employeeInput2)
     {
-        if(supervisorInput1.getFirstName().equals(supervisorInput2.getFirstName()))
+        if(this.getFirstName().equals(employeeInput2.getFirstName()))
         {
-        if(supervisorInput1.getLastName().equals(supervisorInput2.getLastName()))
-        {
-            if(supervisorInput1.getNumber() == supervisorInput2.getNumber())
+            if(this.getLastName().equals(employeeInput2.getLastName()))
             {
-            return true;
+                if(this.getNumber().equals(employeeInput2.getNumber()))
+                {
+                    return true;
+                }
             }
-        }
         }
         return false;
     }

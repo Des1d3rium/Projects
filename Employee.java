@@ -20,7 +20,7 @@ public abstract class Employee
 
     public abstract void adjustPay(double percentage);
 
-    public abstract boolean equals(Employee employee1, Employee employee2);
+    public abstract boolean equals(Employee employee2);
 
     public abstract String toString(); 
 
