@@ -10,7 +10,15 @@ public class EmployeeDatabase extends LinkedList<Employee>
 
     public void adds(Employee employeeInput)
     {
-        databaseLinkedList.addToFront(employeeInput);
+        LLNode<Employee> temp = new LLNode(employeeInput, null);
+        if(databaseLinkedList == null)
+        {
+            databaseLinkedList.setFirstNode(temp);
+        }
+        else
+        {
+            databaseLinkedList.addToFront(employeeInput);
+        }
     }
 
     public Employee find(String firstNameInput, String lastNameInput, String numberInput) throws NoSuchEmployeeException
